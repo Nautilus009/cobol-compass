@@ -8,5 +8,4 @@
 - Are initialization and reset paths correct?
 - Are error paths and rollback paths covered?
 - Is a focused test plan included?
-- Are dialect, platform, runtime, and site rules followed?
-
+- Are dialect, platform, and runtime rules followed?

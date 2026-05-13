@@ -1,6 +1,6 @@
 # Oracle DB Runtime Profile
 
-Use this profile for COBOL programs that call Oracle DB directly or through site-specific database wrappers.
+Use this profile for COBOL programs that call Oracle DB directly or through application database wrappers.
 
 Review:
 
@@ -10,4 +10,3 @@ Review:
 - Bind variable sizes and types
 - Transaction boundaries
 - Error message handling
-

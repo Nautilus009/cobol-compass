@@ -2,7 +2,7 @@
 
 Use the active Cobol Compass profile.
 
-Analyze this log for likely COBOL, runtime, platform, or site-specific issues.
+Analyze this log for likely COBOL dialect, runtime, or platform issues.
 
 Include:
 
@@ -11,4 +11,3 @@ Include:
 - Status codes or return codes
 - Probable failure point
 - Recommended next checks
-

@@ -2,7 +2,7 @@
 
 Cobol Compass is an AI-ready knowledge framework for COBOL development, modernization, maintenance, and review.
 
-It helps developers and AI coding assistants understand the specific COBOL dialect, operating platform, runtime stack, and site coding standards used by a project.
+It helps developers and AI coding assistants understand the specific COBOL dialect, operating platform, and runtime stack used by a project.
 
 Cobol Compass does not replace experienced COBOL developers. It helps developers analyze code, propose minimal changes, review risks, create test plans, and document production-safe fixes.
 
@@ -11,7 +11,7 @@ Cobol Compass does not replace experienced COBOL developers. It helps developers
 - Support multiple COBOL dialects.
 - Support multiple operating platforms.
 - Support multiple runtime environments.
-- Allow client-specific customization.
+- Keep dialect, platform, and runtime rules separated.
 - Encourage minimal, safe, reviewable code changes.
 - Improve AI-assisted COBOL development with clear rules and examples.
 - Preserve existing business logic and production behavior.
@@ -23,18 +23,23 @@ The first supported profile is:
 - Dialect: COBOL-IT
 - Platform: Linux
 - Runtime examples: Oracle Tuxedo, BMC Control-M, ActiveMQ, Oracle DB
-- Site customization: ICC / NLTC
 
-See [profiles/icc-cobol-it-linux.yaml](profiles/icc-cobol-it-linux.yaml).
+See [profiles/cobol-it-linux.yaml](profiles/cobol-it-linux.yaml).
+
+Future profiles can combine other dialects and platforms, for example:
+
+- HP COBOL on OpenVMS
+- IBM Enterprise COBOL on IBM mainframe or z/OS
+- Micro Focus COBOL on Linux or Windows
+- GnuCOBOL on Linux
 
 ## Architecture
 
-Cobol Compass is organized into four layers:
+Cobol Compass is organized into three layers:
 
 1. Core COBOL engineering principles
 2. COBOL dialect profiles
 3. Platform and runtime profiles
-4. Site-specific customization profiles
 
 Example active profile:
 
@@ -46,10 +51,9 @@ runtimes/tuxedo/
 runtimes/control-m/
 runtimes/activemq/
 runtimes/oracle-db/
-sites/icc/
 ```
 
-Do not hardcode site rules into the product core. ICC rules belong in `sites/icc`, COBOL-IT rules belong in `dialects/cobol-it`, and Linux rules belong in `platforms/linux`.
+Do not mix dialect, platform, and runtime rules together. COBOL-IT rules belong in `dialects/cobol-it`, Linux rules belong in `platforms/linux`, and middleware rules belong in `runtimes/`.
 
 ## Intended Use
 
@@ -80,7 +84,6 @@ core/                    General COBOL engineering and AI safety guidance
 dialects/                Dialect-specific rules and risks
 platforms/               Operating platform profiles
 runtimes/                Runtime and integration profiles
-sites/                   Client or site-specific customizations
 profiles/                Active profile selection files
 prompts/                 Reusable AI prompt templates
 tool-configs/            Assistant-specific instruction files
@@ -94,7 +97,7 @@ Cobol Compass v0.1 focuses on one complete, useful profile:
 - Core principles
 - COBOL-IT dialect profile
 - Linux platform profile
-- ICC site profile
+- Runtime profiles for Tuxedo, Control-M, ActiveMQ, and Oracle DB
 - Prompt templates
 - Review checklist
 - Practical examples

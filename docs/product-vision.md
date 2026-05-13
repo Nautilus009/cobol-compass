@@ -1,6 +1,6 @@
 # Product Vision
 
-Cobol Compass helps developers and AI assistants navigate COBOL systems safely by combining general COBOL engineering guidance with dialect, platform, runtime, and site-specific knowledge.
+Cobol Compass helps developers and AI assistants navigate COBOL systems safely by combining general COBOL engineering guidance with dialect, platform, and runtime knowledge.
 
 The project is intentionally Markdown-first. The first goal is reliable guidance that can be read by humans and loaded into AI coding tools. Search, RAG, VS Code extensions, and CLI workflows can be added later.
 
@@ -12,5 +12,4 @@ It is not positioned as an autonomous COBOL replacement system. It supports prod
 
 ## First Profile
 
-The first complete profile supports COBOL-IT on Linux, customized for ICC/NLTC's conservative, minimal-change production environment.
-
+The first complete profile supports COBOL-IT on Linux with common runtime profiles for Tuxedo, Control-M, ActiveMQ, and Oracle DB.

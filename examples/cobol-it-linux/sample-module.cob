@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. ICCSAMP.
+       PROGRAM-ID. CITSAMP.
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
@@ -29,4 +29,3 @@
               NOT AT END
                  DISPLAY INPUT-REC
            END-READ.
-

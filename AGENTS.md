@@ -8,9 +8,8 @@ When assisting with COBOL work, identify the active combination of:
 - Dialect profile
 - Platform profile
 - Runtime profiles
-- Site profile
 
-For the initial ICC profile, load:
+For the initial COBOL-IT Linux profile, load:
 
 - `core/`
 - `dialects/cobol-it/`
@@ -19,16 +18,14 @@ For the initial ICC profile, load:
 - `runtimes/control-m/`
 - `runtimes/activemq/`
 - `runtimes/oracle-db/`
-- `sites/icc/`
-- `profiles/icc-cobol-it-linux.yaml`
+- `profiles/cobol-it-linux.yaml`
 
 ## Operating Rules
 
 - Treat generated COBOL as draft until reviewed, compiled, and tested.
 - Prefer minimal, reviewable changes over broad rewrites.
 - Preserve existing business behavior unless the requested change explicitly modifies it.
-- Do not mix ICC-specific conventions into core rules.
+- Do not mix dialect-specific rules into platform or runtime profiles.
 - State which profile assumptions are active before making dialect-sensitive recommendations.
 - Provide a focused test plan for any proposed code change.
 - Surface uncertainty clearly when compiler, runtime, data layout, or deployment behavior is unknown.
-

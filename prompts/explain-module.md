@@ -11,6 +11,5 @@ Include:
 - Important files, databases, messages, or services
 - Key paragraphs and control flow
 - Error-handling behavior
-- Dialect, platform, runtime, or site-specific risks
+- Dialect, platform, or runtime-specific risks
 - Questions that need human confirmation
-
