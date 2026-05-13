@@ -1,0 +1,19 @@
+name: icc-cobol-it-linux
+description: ICC COBOL-IT on Linux profile
+dialect: cobol-it
+platform: linux
+runtimes:
+  - tuxedo
+  - control-m
+  - activemq
+  - oracle-db
+site: icc
+rules:
+  minimal_change: true
+  human_review_required: true
+  preserve_existing_style: true
+  no_inline_cobol_comments: true
+  cobol_comment_asterisk_column_1: true
+  paragraph_must_end_with_dot: true
+  use_spaces_not_tabs: true
+

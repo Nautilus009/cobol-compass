@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MINCHG.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-COUNT              PIC 9(04) VALUE ZERO.
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           ADD 1 TO WS-COUNT
+           DISPLAY "COUNT=" WS-COUNT
+           GOBACK.
+

@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ROLLBK.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-ERROR-FLAG         PIC X VALUE "N".
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           PERFORM UPDATE-PARA
+           IF WS-ERROR-FLAG = "Y"
+              PERFORM ROLLBACK-PARA
+           END-IF
+           GOBACK.
+       UPDATE-PARA.
+           EXIT.
+       ROLLBACK-PARA.
+           DISPLAY "ROLLBACK REQUIRED"
+           EXIT.
+
