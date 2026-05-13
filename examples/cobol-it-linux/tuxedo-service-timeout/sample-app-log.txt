@@ -1,0 +1,4 @@
+2026-01-01 12:00:00 HOST_A SAMPLE_SERVICE enter request_id=SAMPLE_REQUEST
+2026-01-01 12:00:01 HOST_A SAMPLE_SERVICE before database call
+2026-01-01 12:00:29 HOST_A SAMPLE_SERVICE database call still pending
+

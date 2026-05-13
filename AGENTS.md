@@ -8,6 +8,7 @@ When assisting with COBOL work, identify the active combination of:
 - Dialect profile
 - Platform profile
 - Runtime profiles
+- Optional private overlay
 
 For the initial COBOL-IT Linux profile, load:
 

@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. STATUS01.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  APP-STATUS            PIC X(02) VALUE "00".
+       01  APP-STATUS-OK         PIC X(02) VALUE "00".
+       01  APP-STATUS-ERROR      PIC X(02) VALUE "99".
+       01  APP-AUX-STATUS        PIC X(02) VALUE SPACES.
+       01  APP-FREE-TEXT         PIC X(80) VALUE SPACES.
+       01  END-OF-INPUT          PIC X VALUE "N".
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           PERFORM UNTIL APP-STATUS NOT = APP-STATUS-OK
+                  OR END-OF-INPUT = "Y"
+              PERFORM PROCESS-NEXT-RECORD
+           END-PERFORM
+           IF APP-STATUS NOT = APP-STATUS-OK
+              MOVE APP-STATUS-ERROR TO APP-AUX-STATUS
+              MOVE "PROCESS-NEXT-RECORD failed"
+                TO APP-FREE-TEXT
+              DISPLAY APP-FREE-TEXT
+              PERFORM ROLLBACK-TRANSACTION
+           END-IF
+           GOBACK.
+       PROCESS-NEXT-RECORD.
+           EXIT.
+       ROLLBACK-TRANSACTION.
+           EXIT.
+

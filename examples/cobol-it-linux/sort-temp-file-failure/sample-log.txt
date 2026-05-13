@@ -1,0 +1,5 @@
+2026-01-01 11:00:00 HOST_A SAMPLE_SORT_JOB started
+2026-01-01 11:00:02 HOST_A SORT input=/app/runtime/path/input.dat output=/app/runtime/path/output.dat temp=/app/tmp
+2026-01-01 11:00:05 HOST_A SORT failed phase=SORT-OUTPUT status=99 text="temporary file write failed"
+2026-01-01 11:00:05 HOST_A SAMPLE_SORT_JOB ended rc=16
+

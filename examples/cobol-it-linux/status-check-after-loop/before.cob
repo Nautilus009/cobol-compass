@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. STATUS01.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  APP-STATUS            PIC X(02) VALUE "00".
+       01  APP-STATUS-OK         PIC X(02) VALUE "00".
+       01  END-OF-INPUT          PIC X VALUE "N".
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           PERFORM UNTIL END-OF-INPUT = "Y"
+              PERFORM PROCESS-NEXT-RECORD
+           END-PERFORM
+           GOBACK.
+       PROCESS-NEXT-RECORD.
+           EXIT.
+

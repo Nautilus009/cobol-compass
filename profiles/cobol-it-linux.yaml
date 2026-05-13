@@ -1,14 +1,55 @@
 name: cobol-it-linux
-description: COBOL-IT on Linux profile
-dialect: cobol-it
-platform: linux
+description: Generic COBOL-IT on Linux profile for enterprise batch and online systems
+dialect:
+  name: cobol-it
+  version: unspecified
+  source_format: project-defined
+  compiler_options: project-defined
+platform:
+  os: linux
+  architecture: x86_64
+  distribution: unspecified
 runtimes:
-  - tuxedo
-  - control-m
-  - activemq
-  - oracle-db
+  transaction_manager:
+    name: tuxedo
+    version: unspecified
+    enabled: true
+  scheduler:
+    name: control-m
+    version: unspecified
+    enabled: true
+  messaging:
+    name: activemq
+    version: unspecified
+    enabled: true
+  database:
+    name: oracle-db
+    version: unspecified
+    enabled: true
+environment:
+  variables: []
+coding_rules:
+  source_format: project-defined
+  comment_style: project-defined
+  inline_comments_allowed: project-defined
+  paragraph_dot_required: project-defined
+  preserve_period_usage_on_untouched_lines: true
+  use_spaces_not_tabs: true
+  minimal_change: true
+review:
+  human_review_required: true
+  compile_required: true
+  test_plan_required: true
+  risk_summary_required: true
 rules:
   minimal_change: true
   human_review_required: true
   preserve_existing_style: true
   use_spaces_not_tabs: true
+  require_compile: true
+  require_test_plan: true
+  require_risk_summary: true
+overlay:
+  supported: true
+  private_overlay_recommended: true
+  public_repo_must_not_include_customer_specific_data: true

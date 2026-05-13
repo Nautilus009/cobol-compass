@@ -8,22 +8,24 @@ Cobol Compass separates guidance into layers so rules can be composed without bl
 2. `dialects/`: Syntax, compiler, runtime, and dialect-specific behavior.
 3. `platforms/`: Operating system behavior, filesystem rules, environment, permissions, and process behavior.
 4. `runtimes/`: Middleware, batch schedulers, messaging, databases, and operational integrations.
+5. `overlays/`: Guidance for optional private overlays that stay outside the public repository.
 
 ## Active Profile Model
 
-An active profile declares the selected dialect, platform, and runtime stack.
+An active profile declares the selected dialect, platform, runtime stack, and optional private overlay policy.
 
 Example:
 
 ```yaml
-name: cobol-it-linux
-dialect: cobol-it
-platform: linux
+dialect:
+  name: cobol-it
+platform:
+  os: linux
 runtimes:
-  - tuxedo
-  - control-m
-  - activemq
-  - oracle-db
+  transaction_manager:
+    name: tuxedo
+overlay:
+  supported: true
 ```
 
 ## Design Rule

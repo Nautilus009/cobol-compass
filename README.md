@@ -35,11 +35,12 @@ Future profiles can combine other dialects and platforms, for example:
 
 ## Architecture
 
-Cobol Compass is organized into three layers:
+Cobol Compass is organized into three public layers plus an optional private overlay:
 
 1. Core COBOL engineering principles
 2. COBOL dialect profiles
 3. Platform and runtime profiles
+4. Optional private overlay
 
 Example active profile:
 
@@ -51,9 +52,12 @@ runtimes/tuxedo/
 runtimes/control-m/
 runtimes/activemq/
 runtimes/oracle-db/
+overlays/
 ```
 
 Do not mix dialect, platform, and runtime rules together. COBOL-IT rules belong in `dialects/cobol-it`, Linux rules belong in `platforms/linux`, and middleware rules belong in `runtimes/`.
+
+Private overlays can add organization-specific guidance outside the public repository. Do not commit customer names, internal hostnames, credentials, proprietary source code, production logs, or non-sanitized examples to this public framework.
 
 ## Intended Use
 
@@ -85,8 +89,10 @@ dialects/                Dialect-specific rules and risks
 platforms/               Operating platform profiles
 runtimes/                Runtime and integration profiles
 profiles/                Active profile selection files
+overlays/                Guidance for private project overlays
 prompts/                 Reusable AI prompt templates
 tool-configs/            Assistant-specific instruction files
+checklists/              Production support and review checklists
 examples/                End-to-end examples
 ```
 

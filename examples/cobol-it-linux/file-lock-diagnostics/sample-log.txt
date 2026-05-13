@@ -1,0 +1,5 @@
+2026-01-01 10:15:00 HOST_A SAMPLE_JOB started
+2026-01-01 10:15:03 HOST_A SAMPLE_JOB lock request resource=/app/runtime/path/SAMPLE_RESOURCE.lock
+2026-01-01 10:15:33 HOST_A SAMPLE_JOB lock timeout owner_pid=12345 requester_pid=23456
+2026-01-01 10:15:33 HOST_A SAMPLE_JOB ended rc=12
+

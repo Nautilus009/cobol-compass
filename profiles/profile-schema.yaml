@@ -1,0 +1,50 @@
+profile_name: string
+description: string
+dialect:
+  name: string
+  version: string
+  source_format: string
+  compiler_options: string
+platform:
+  os: string
+  architecture: string
+  distribution: string
+  filesystem_notes: string
+runtimes:
+  transaction_manager:
+    name: string
+    version: string
+    enabled: boolean
+  scheduler:
+    name: string
+    version: string
+    enabled: boolean
+  messaging:
+    name: string
+    version: string
+    enabled: boolean
+  database:
+    name: string
+    version: string
+    enabled: boolean
+environment:
+  variables:
+    - name: string
+      description: string
+      required: boolean
+      sensitive: boolean
+      example: string
+coding_rules:
+  minimal_change: boolean
+  preserve_existing_style: boolean
+  comment_style: string
+  paragraph_dot_required: string
+  use_spaces_not_tabs: boolean
+review:
+  human_review_required: boolean
+  compile_required: boolean
+  test_plan_required: boolean
+  risk_summary_required: boolean
+overlay:
+  supported: boolean
+  private_overlay_recommended: boolean
